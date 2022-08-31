@@ -25,9 +25,12 @@
   <main class="container">
     <section class="start">
       <form class="form">
-        <input class="input" name="number" type="number" placeholder="Введите четное число" min="2" max="10" step="2">
-        <button class="btn" disabled="true"><span class="start-big">Начать игру!</span><span
-            class="start-small">Играть!</span></button>
+        <input class="form__input input" name="number" type="number" placeholder="Введите четное число" min="2" max="10"
+          step="2">
+        <button class="btn btn-start" disabled="true">
+          <span class="btn-start-big">Начать игру!</span>
+          <span class="btn-start-small">Играть!</span>
+        </button>
       </form>
       <audio src="sound/sound-1.mp3" id="audio1"></audio>
       <audio src="sound/sound-2.mp3" id="audio2"></audio>
@@ -35,11 +38,10 @@
       <audio src="sound/sound-4.mp3" id="audio4"></audio>
     </section>
 
-
     <section class="game">
       <ul class="card__list">
       </ul>
-      <button class="btn rest">Restart</button>
+      <button class="btn btn-restart">Повторить</button>
     </section>
   </main>
 

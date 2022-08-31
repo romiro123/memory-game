@@ -1,9 +1,9 @@
 const form = document.querySelector('form')
 const input = document.querySelector('.input');
-const button = document.querySelector('.btn');
+const button = document.querySelector('.btn-start');
 let cardList = document.querySelector('.card__list');
-const restart = document.querySelector('.rest');
-let allCards;  //NodeList
+const restart = document.querySelector('.btn-restart');
+let allCards;
 
 let arr = [];
 let checkArr = [];

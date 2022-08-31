@@ -10,9 +10,9 @@ body {
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-  color: #fff;
   max-width: 1920px;
   height: 100vh;
+  color: #fff;
   background: linear-gradient(168deg, rgba(135, 17, 168, 1) 1%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
 }
 
@@ -63,18 +63,20 @@ ul {
   justify-content: center;
 }
 
+.form__input {
+  margin-right: 50px;
+}
+
 .input {
-  border: none;
-  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
   height: 50px;
   width: 220px;
   color: #fff;
+  background-color: transparent;
   border: 1px solid #fff;
   border-radius: 100px;
   padding-left: 25px;
-  margin-right: 50px;
 }
 
 .input::placeholder {
@@ -92,16 +94,24 @@ ul {
   border: 2px solid #28a745;
   border-radius: 100px;
   background-color: #28a745;
-  padding: 14px 40px;
 }
 
 button:disabled {
-  background-color: transparent;
   border: 2px solid #ffffff73;
   color: silver;
+  background-color: transparent;
 }
 
-.start-small {
+.btn-start {
+  padding: 14px 40px;
+}
+
+.btn-restart {
+  display: none;
+  padding: 14px 85px;
+}
+
+.btn-start-small {
   display: none;
 }
 
@@ -111,17 +121,11 @@ button:disabled {
   align-items: center;
 }
 
-.rest {
-  display: none;
-  padding: 13px 85px;
-}
-
 /*----card-----*/
 .card__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*max-width: 1024px;*/
   margin: 0 auto 20px;
 }
 
@@ -129,21 +133,21 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 120px;
   height: 120px;
   border-radius: 10px;
   background-color: #0000004a;
-  margin: 15px;
-  cursor: pointer;
   transition: all .5s;
   transform: scale(1);
   transform: rotateY(180deg);
+  margin: 15px;
 }
 
 .card__num {
   display: inline-block;
-  opacity: 0;
   font-size: 40px;
+  opacity: 0;
 }
 
 .open {
@@ -176,7 +180,7 @@ button:disabled {
     padding: 0 10px;
   }
 
-  .btn {
+  .btn-start {
     padding: 14px 25px;
   }
 
@@ -184,7 +188,7 @@ button:disabled {
     justify-content: space-around;
   }
 
-  .input {
+  .form__input {
     margin-right: 5px;
   }
 }
@@ -201,6 +205,9 @@ button:disabled {
 
   .btn {
     font-size: inherit;
+  }
+
+  .btn-start {
     padding: 14px 15px;
   }
 
@@ -209,27 +216,26 @@ button:disabled {
     height: 80px;
     margin: 10px;
   }
-
-  .card__num {
-    font-size: 28px;
-  }
 }
 
 @media (max-width:374px) {
-  .start-big {
+  .btn-start-big {
     display: none;
   }
 
-  .start-small {
+  .btn-start-small {
     display: inline;
+  }
+
+  .form__input {
+    padding-left: 18px;
   }
 
   .input {
     height: 40px;
-    padding-left: 18px;
   }
 
-  .btn {
+  .btn-start {
     padding: 9px 15px;
   }
 }
