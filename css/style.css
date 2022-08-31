@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -13,6 +14,7 @@ body {
   max-width: 1920px;
   height: 100vh;
   color: #fff;
+  background: -o-linear-gradient(282deg, rgba(135, 17, 168, 1) 1%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
   background: linear-gradient(168deg, rgba(135, 17, 168, 1) 1%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
 }
 
@@ -58,8 +60,14 @@ ul {
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -77,6 +85,22 @@ ul {
   border: 1px solid #fff;
   border-radius: 100px;
   padding-left: 25px;
+}
+
+.input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.input::-moz-placeholder {
+  color: #fff;
+}
+
+.input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.input::-ms-input-placeholder {
+  color: #fff;
 }
 
 .input::placeholder {
@@ -116,30 +140,53 @@ button:disabled {
 }
 
 .game {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 /*----card-----*/
 .card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto 20px;
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
   width: 120px;
   height: 120px;
   border-radius: 10px;
   background-color: #0000004a;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
   transition: all .5s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   margin: 15px;
 }
@@ -151,17 +198,21 @@ button:disabled {
 }
 
 .open {
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   background-color: #fffcfc36;
 }
 
 .open span {
+  -webkit-transition: opacity .5s .2s;
+  -o-transition: opacity .5s .2s;
   transition: opacity .5s .2s;
   opacity: 1;
 }
 
 .done {
   background-color: #28a745;
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 
@@ -185,6 +236,7 @@ button:disabled {
   }
 
   .form {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
