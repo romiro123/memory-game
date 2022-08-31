@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pair game</title>
+  <script defer src="./pair-app.js"></script>
+  <script defer src="./createGame.js"></script>
+  <script defer src="./newCard.js"></script>
+  <script defer src="./shuffle.js"></script>
+  <script defer src="./confetti.js"></script>
+  <script defer src="./finish.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Игра в пары</h1>
+  </header>
+
+  <main class="container">
+    <section class="start">
+      <form class="form">
+        <input class="input" name="number" type="number" placeholder="Введите четное число" min="2" max="10" step="2">
+        <button class="btn" disabled="true"><span class="start-big">Начать игру!</span><span
+            class="start-small">Играть!</span></button>
+      </form>
+      <audio src="sound/sound-1.mp3" id="audio1"></audio>
+      <audio src="sound/sound-2.mp3" id="audio2"></audio>
+      <audio src="sound/sound-3.mp3" id="audio3"></audio>
+      <audio src="sound/sound-4.mp3" id="audio4"></audio>
+    </section>
+
+
+    <section class="game">
+      <ul class="card__list">
+      </ul>
+      <button class="btn rest">Restart</button>
+    </section>
+  </main>
+
+</body>
+
+</html>
