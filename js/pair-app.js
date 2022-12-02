@@ -23,6 +23,14 @@ input.addEventListener('input', function () {
 form.addEventListener('submit', function (e) {
   e.preventDefault(); //откл автоматического обновления стр после submit
 
+  if (allCards !== undefined) {
+    arr = [];
+    doneCard = [];
+    for (i = 0; i < allCards.length; i++) {
+      cardList.removeChild(allCards[i]);
+    }
+  }
+
   createGame(cardList); //вызов функции createGame
 
   restart.addEventListener('click', function () {
